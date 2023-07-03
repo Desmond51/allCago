@@ -1,9 +1,26 @@
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import { sampleProducts } from '../data'
 import { Link } from 'react-router-dom'
-import ProductPage from './ProductPage'
+import { Product } from '../types/Products'
+
+type State ={
+  products: Product[]
+  loading: boolean
+  error: string
+}
+
+type Action = 
+{ type: 'FETCH_REQUEST'}
+{ 
+  type: 'FETCH_SUCCESS'
+  payload: Procduct[]
+}
+
+{ type: 'FETCH_FAIL'  
+payload: string}
 
 export default function Homepage() {
+  
   return (
     <div>
        
