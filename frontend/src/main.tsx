@@ -9,11 +9,15 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import Homepage from './pages/Homepage.tsx'
+import ProductPage from './pages/ProductPage.tsx'
 
 
 const router = createBrowserRouter(
   createRoutesFromElements( 
     <Route path="/" element={<App />}>
+      <Route index={true} element={ <Homepage />}></Route>
+      <Route path='product/:slug' element ={<ProductPage />}></Route>
       {/* <Route path="dashboard" element={<Dashboard />} /> */}
       {/* ... etc. */}
     </Route>
