@@ -3,7 +3,7 @@ import { sampleProducts } from './data';
 
 const app = express()
 
-app.get('/ api/products', (req: Request, res:Response) =>{
+app.get('/api/products', (req: Request, res:Response) =>{
     res.json(sampleProducts)
 })
 const PORT = 4000;
